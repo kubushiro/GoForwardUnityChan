@@ -29,4 +29,16 @@ public class CubeController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.name == "CubePrefab(Clone)")
+        {
+            GetComponent<AudioSource>().Play();
+        }
+        if (collision.gameObject.name == "ground")
+        {
+            GetComponent<AudioSource>().Play();
+        }
+    }
 }

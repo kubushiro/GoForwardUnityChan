@@ -65,16 +65,4 @@ public class CubeGenerator : MonoBehaviour
             this.span = this.offsetX + this.spaceX * n;
         }
     }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.name == "Cube")
-        {
-            GetComponent<AudioSource>().Play();
-        }
-        if(collision.gameObject.name == "ground")
-        {
-            GetComponent<AudioSource>().Play();
-        }
-    }
 }
